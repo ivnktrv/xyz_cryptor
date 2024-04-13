@@ -33,9 +33,9 @@ xyz --decrypt [файл.xyz] [ключ] --outfile [файл.расширение
 ```
 ***
 **Например:**
-- У нас есть картинка `image.png`:
+- У нас есть картинка `chipi chapa.png`:
 <center>
-    <img src="example/chipi chapa.png" width=300>
+    <img src="example/chipi chapa.png" width=400>
 </center>
 
 - Мы хотим его зашифровать: `xyz -e "chipi chapa.png" ecnrypted_chipi_chapa`
@@ -43,17 +43,17 @@ xyz --decrypt [файл.xyz] [ключ] --outfile [файл.расширение
 - Создаётся файл `encrypted_chipi_chapa.xyz`.
 
 <center>
-    <img src="example/2.png">
+    <img src="example/2.png" width="300">
 </center>
 
 - Далее отправляем этот файл какому-то челу и говорим ключ (в нашем случае: `1456376`) и то что этот файл имеет расширение `.png`. Этот чел получает файл и с помощью этой проги его расшифровывает: `xyz -d encrypted_chipi_chapa 1456376 --outfile image.png`
 
 <center>
-    <img src="example/1.png">
+    <img src="example/1.png" width="300">
 </center>
 
 - И вот наш расшифрованный чипи чапа : D
 
 <center>
-    <img src="example/image.png" width=300>
+    <img src="example/image.png" width=400>
 </center>
