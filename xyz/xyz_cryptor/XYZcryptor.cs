@@ -7,8 +7,8 @@ namespace xyz_cryptor;
 
 public class XYZcryptor
 {
-    private const byte B_255 = 0b11111111;
-    private const int XYZ_BIN = 0b11110000111100101111010;
+    private const byte  B_255    = 0b11111111;
+    private const int   XYZ_BIN  = 0b11110000111100101111010;
 
     public void encrypt(string openFilePath, string saveFileName)
     {
@@ -61,9 +61,6 @@ public class XYZcryptor
                 binWriter.Write(chars_bin[i]);
             }
         }
-
-        chars_bin = null;
-        bytes = null;
     }
 
     public void decrypt(string openFile, int key, string? outFile = null, bool print = false)
@@ -126,8 +123,5 @@ public class XYZcryptor
                 }
             }
         }
-
-        chars = null;
-        chars_bin = null;
     }
 }
