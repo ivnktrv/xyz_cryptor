@@ -1,6 +1,8 @@
 ﻿// Made by ivnktrv
 // My github - https://github.com/ivnktrv
 
+using xyz_keygen;
+
 namespace xyz_cryptor;
 
 public class XYZcryptor
@@ -18,6 +20,11 @@ public class XYZcryptor
             bytes = new List<byte>(getBytes);
         }
 
+        XYZkeygen kg = new XYZkeygen();
+        
+        int key = 0;
+        kg.keygen(ref key);
+
         byte[]? chars_bin = new byte[bytes.Count];
 
         for (int i = 0; i < bytes.Count; i++)
@@ -32,13 +39,20 @@ public class XYZcryptor
             chars_bin[i] = (byte)invertBits;
         }
 
+
         for (int i = 0; i < chars_bin.Length; i++)
         {
             int addXYZ = chars_bin[i] + XYZ_BIN;
             chars_bin[i] = (byte)addXYZ;
         }
 
-        Console.WriteLine("[+] Сделано");
+        for (int i = 0; i < chars_bin.Length; i++)
+        {
+            int h = chars_bin[i] ^ key;
+            chars_bin[i] = (byte)h;
+
+        }
+        Console.WriteLine($"[+] Сделано. Ключ: {key}");
 
         using (BinaryWriter binWriter = new BinaryWriter(File.Open($"{saveFileName}.xyz", FileMode.Create, FileAccess.Write)))
         {
@@ -52,7 +66,7 @@ public class XYZcryptor
         bytes = null;
     }
 
-    public void decrypt(string openFile, string? outFile = null, bool print = false)
+    public void decrypt(string openFile, int key, string? outFile = null, bool print = false)
     {
         List<int>? chars_bin = new List<int>();
 
@@ -73,6 +87,11 @@ public class XYZcryptor
         }
 
         byte[]? chars = new byte[chars_bin.Count];
+        for (int i = 0; i < chars_bin.Count; i++)
+        {
+            int h = chars_bin[i] ^ key;
+            chars_bin[i] = (byte)h;
+        }
 
         for (int i = 0; i < chars_bin.Count; i++)
         {
@@ -85,7 +104,6 @@ public class XYZcryptor
             int invertBytes = B_255 - chars_bin[i];
             chars_bin[i] = invertBytes;
         }
-
         for (int i = 0; i < chars_bin.Count; i++)
         {
             byte toCharASCII = (byte)chars_bin[i];

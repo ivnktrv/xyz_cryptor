@@ -9,7 +9,6 @@ class XYZmain
 {
     static void Main(string[] args)
     {
-
         if (args.Length == 0)
         {
             Console.WriteLine("[-] Вы не передали параметров! За справкой: xyz -h (или --help)");
@@ -25,26 +24,26 @@ class XYZmain
                 }
                 else if (args[0] == "-d" || args[0] == "--decrypt")
                 {
-                    if (args.Length == 2)
+                    if (args.Length == 3)
                     {
-                        x.decrypt(args[1], print: true);
+                        x.decrypt(args[1], int.Parse(args[2]), print: true);
                     }
                     else
                     {
-                        if (args[2] == "--outfile")
+                        if (args[3] == "--outfile")
                         {
-                            x.decrypt(args[1], outFile: args[3]);
+                            x.decrypt(args[1], int.Parse(args[2]), outFile: args[4]);
                         }
                     }
                     
                 }
                 else if (args[0] == "-h" || args[0] == "--help")
                 {
-                    Console.WriteLine("\n" +
-                        "xyz -h (или --help) <- справка" +
+                    Console.WriteLine(
+                        "\nxyz -h (или --help) <- справка" +
                         "\n\nxyz -e (или --encrypt) [файл, который будет зашифрован] [имя зашифрованного файла (передать без расширения!)] <- зашифровать файл" +
                         "\n\nxyz -d (или --decrypt) [.xyz файл] <- расшифровать .xyz файл и вывести содержимое в консоль" +
-                        "\nxyz -d (или --decrypt) [.xyz файл] --outfile [файл который будет расшифрован] <- расшифровать .xyz файл и записать в файл"
+                        "\nxyz -d (или --decrypt) [.xyz файл] [ключ] --outfile [файл который будет расшифрован] <- расшифровать .xyz файл и записать в файл"
                     );
                 }
                 else
@@ -59,3 +58,5 @@ class XYZmain
         }
     }
 }
+//      0  1    2      3       4
+// xyz -d file key --outfile s.txt

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\xyz_keygen\xyz_keygen.csproj" />
+  </ItemGroup>
+
 </Project>
