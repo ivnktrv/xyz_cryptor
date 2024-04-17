@@ -55,7 +55,7 @@ xyz --decrypt [файл.xyz] [ключ] --outfile [файл.расширение
 - И вот наш расшифрованный чипи чапа : D
 
 <center>
-    <img src="example/image.png" width=400>
+    <img src="example/chipi chapa.png" width=400>
 </center>
 
 ***
