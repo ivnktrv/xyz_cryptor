@@ -14,7 +14,7 @@
 		<PublishReadyToRun>true</PublishReadyToRun>
 		<PublishTrimmed>true</PublishTrimmed>
 		<TrimMode>link</TrimMode>
-		<Description>XYZ encryptor. Made by ivnktrv. My github - https://github.com/ivnktrv</Description>
+		<Description>Made by ivnktrv. My github - https://github.com/ivnktrv</Description>
 		<Copyright>Made by ivnktrv</Copyright>
 		<Version>1.3.0</Version>
 		<Authors>ivnktrv</Authors>

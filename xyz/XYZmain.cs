@@ -1,7 +1,4 @@
-﻿// Made by ivnktrv
-// My github - https://github.com/ivnktrv
-
-using xyz_cryptor;
+﻿using xyz_cryptor;
 
 namespace xyz_main;
 
@@ -41,10 +38,14 @@ class XYZmain
                 {
                     Console.WriteLine(
                         "\nxyz -h (или --help) <- справка" +
-                        "\n\nxyz -e (или --encrypt) [файл, который будет зашифрован] [имя зашифрованного файла (передать без расширения!)] <- зашифровать файл" +
-                        "\n\nxyz -d (или --decrypt) [.xyz файл] [ключ] <- расшифровать .xyz файл и вывести содержимое в консоль" +
-                        "\nxyz -d (или --decrypt) [.xyz файл] [ключ] --outfile [файл который будет расшифрован] <- расшифровать .xyz файл и записать в файл"
+                        "\n\nxyz -e (или --encrypt) [файл, который будет зашифрован] [имя зашифрованного файла] <- зашифровать файл" +
+                        "\n\nxyz -d (или --decrypt) [зашифрованный файл] [ключ] <- расшифровать зашифрованный файл и вывести содержимое в консоль" +
+                        "\nxyz -d (или --decrypt) [зашифрованный файл] [ключ] --outfile [файл который будет расшифрован] <- расшифровать зашифрованный файл и записать в файл"
                     );
+                }
+                else if (args[0] == "-v" || args[0] == "--version")
+                {
+                    Console.WriteLine("XYZ Cryptor v1.3.0\nGitHub: https://github.com/ivnktrv/xyz_cryptor");
                 }
                 else
                 {

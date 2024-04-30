@@ -1,7 +1,4 @@
-﻿// Made by ivnktrv
-// My github - https://github.com/ivnktrv
-
-using xyz_keygen;
+﻿using xyz_keygen;
 
 namespace xyz_cryptor;
 
@@ -39,7 +36,6 @@ public class XYZcryptor
             chars_bin[i] = (byte)invertBits;
         }
 
-
         for (int i = 0; i < chars_bin.Length; i++)
         {
             int addXYZ = chars_bin[i] + XYZ_BIN;
@@ -54,7 +50,7 @@ public class XYZcryptor
         }
         Console.WriteLine($"[+] Сделано. Ключ: {key}");
 
-        using (BinaryWriter binWriter = new BinaryWriter(File.Open($"{saveFileName}.xyz", FileMode.Create, FileAccess.Write)))
+        using (BinaryWriter binWriter = new BinaryWriter(File.Open($"{saveFileName}", FileMode.Create, FileAccess.Write)))
         {
             for (int i = 0; i < chars_bin.Length; i++)
             {
@@ -69,7 +65,7 @@ public class XYZcryptor
 
         try
         {
-            using (BinaryReader binRead = new BinaryReader(File.Open($"{openFile}.xyz", FileMode.Open, FileAccess.Read)))
+            using (BinaryReader binRead = new BinaryReader(File.Open($"{openFile}", FileMode.Open, FileAccess.Read)))
             {
                 while (binRead.BaseStream.Position != binRead.BaseStream.Length)
                 {
