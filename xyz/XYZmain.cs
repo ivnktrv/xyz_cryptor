@@ -45,7 +45,7 @@ class XYZmain
                 }
                 else if (args[0] == "-v" || args[0] == "--version")
                 {
-                    Console.WriteLine("XYZ Cryptor v1.3.0\nGitHub: https://github.com/ivnktrv/xyz_cryptor");
+                    Console.WriteLine("XYZ Cryptor v1.3.1\nGitHub: https://github.com/ivnktrv/xyz_cryptor");
                 }
                 else
                 {
