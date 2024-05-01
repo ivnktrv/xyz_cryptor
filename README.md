@@ -1,14 +1,8 @@
-```
-___      ___ ___   ___   ________
-\  \    /  / |  |  |  | |____   |
- \  \  /  /  |  \  /  /     /  /
-  \  \/  /    \  \/  /     /  /
-  /  /\  \     \    /     /  /
- /  /  \  \     \  /     /  /___
-/__/    \__\    |__|    |______|
+<center>
+    <img style="border-radius: 20px" src="img/xyz_banner.png">
+</center>
 
-            CRYPTOR
-```
+***
 
 **XYZ Cryptor** - программа, которая шифрует файлы. То есть она делает копию оригинального файла, но эта копия - зашифрованный ориг файл.
 
@@ -42,19 +36,19 @@ xyz --version  |
 - У нас есть [архив](example/SECRET.zip) с секретным содержимым:
 
 <center>
-    <img src="example/1.png" width="200">
+    <img style="border-radius: 20px" src="img/1.png" width="200">
 </center>
 
 - И мы хотим отправить этот архив другу. Чё делаем, открываем командную строку, переходим в папку где находиться прога и пишем: `xyz -e SECRET.zip program.exe`. Прога зашифрует файл и даст нам ключ от файла. В итоге мы получили вот это: 
 
 <center>
-    <img src="example/2.png" width="200">
+    <img style="border-radius: 20px" src="img/2.png" width="200">
 </center>
 
 - Это зашифрованный архив, которую мы "замаскировали" под exe-шник (можно хоть под картинку замаскировать). Отправили другу файл и ключ от него, и ещё не забыли сказать что это zip архив. И чтобы его расшифровать, наш друг пишет в командной строке: `xyz -d program.exe ключ --outfile decrypted_secret.zip`.
 
 <center>
-    <img src="example/3.png" width="200">
+    <img style="border-radius: 20px" src="img/3.png" width="200">
 </center> 
 
 - Готово : D
