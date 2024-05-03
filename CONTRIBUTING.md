@@ -11,7 +11,7 @@
 ***
 - Работаете с ним...
 ***
-- Добавили новую фичу? - отправляете pull request
+- Добавили новую фичу? - отправляете **pull request**
 
 <img src="img/pr4.png" width="400">
 <img src="img/pr5.png" width="400">
@@ -21,6 +21,6 @@
 
 <img src="img/pr7.png" width="400">
 
-- Готово : D. Ожидайте принятия вашего pull request
+- Готово `:D`. Ожидайте принятия ваших изменений
 
 <img src="img/pr8.png" width="400">
