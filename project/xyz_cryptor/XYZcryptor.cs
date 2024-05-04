@@ -1,11 +1,12 @@
-﻿using xyz_keygen;
+﻿using System.Reflection.Emit;
+using xyz_keygen;
 
 namespace xyz_cryptor;
 
 public class XYZcryptor
 {
-    private const byte  B_255    = 0b11111111;
-    private const int   XYZ_BIN  = 0b11110000111100101111010;
+    private const byte B_255 = 0b11111111;
+    private const int XYZ_BIN = 0b11110000111100101111010;
 
     public void encrypt(string openFilePath, string saveFileName)
     {
@@ -18,7 +19,7 @@ public class XYZcryptor
         }
 
         XYZkeygen kg = new XYZkeygen();
-        
+
         int key = 0;
         kg.keygen(ref key);
 
@@ -48,7 +49,8 @@ public class XYZcryptor
             chars_bin[i] = (byte)h;
 
         }
-        Console.WriteLine($"[+] Сделано. Ключ: {key}");
+
+        Console.WriteLine($"[+] Сделано. Ключ для {saveFileName}: {key}");
 
         using (BinaryWriter binWriter = new BinaryWriter(File.Open($"{saveFileName}", FileMode.Create, FileAccess.Write)))
         {
@@ -80,6 +82,7 @@ public class XYZcryptor
         }
 
         byte[]? chars = new byte[chars_bin.Count];
+
         for (int i = 0; i < chars_bin.Count; i++)
         {
             int h = chars_bin[i] ^ key;
