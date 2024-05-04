@@ -53,9 +53,21 @@ xyz --version  |
 
 - Готово : D
 
+Для более лучшего шифрования можно делать многослойное шифрование, что это такое:
+
+- Есть файл file.txt, шифруем: `xyz -e file.txt encrypted_file_1`. Получили ключ: `1`
+- Теперь шифруем `encrypted_file_1`: `xyz -e encrypted_file_1 encrypted_file_2 `: Получили ключ - `2`
+- И шифруем файл `encrypted_file_2`: `xyz -e  encrypted_file_2 encrypted_file_3`: Получили ключ - `3`
+
+Теперь чтобы из файла `encrypted_file_3` получить `file.txt`, надо:
+
+- Расшифровать `encrypted_file_3`, для него вставляем ключ `3`
+- Потом `encrypted_file_2`, для него вставляем ключ `2`
+- и на последнем месте `encrypted_file_1`, для него вставляем ключ `1`
+
 ***
 
-### Хотите внести свой вклад в проект? - читайте [CONTRIBUTING.md](CONTRIBUTING.md)
+### Хотите внести свой вклад в проект? - читайте [здесь](CONTRIBUTING.md)
 
 ***
 
