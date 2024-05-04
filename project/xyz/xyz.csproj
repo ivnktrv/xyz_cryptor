@@ -14,10 +14,10 @@
 		<PublishReadyToRun>true</PublishReadyToRun>
 		<PublishTrimmed>true</PublishTrimmed>
 		<TrimMode>link</TrimMode>
-		<Version>1.3.1</Version>
+		<Version>1.3.2</Version>
 		<Title>XYZ Encryptor</Title>
-		<AssemblyVersion>1.3.1</AssemblyVersion>
-		<FileVersion>1.3.1</FileVersion>
+		<AssemblyVersion>1.3.2</AssemblyVersion>
+		<FileVersion>1.3.2</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
