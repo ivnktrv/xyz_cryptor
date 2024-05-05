@@ -29,8 +29,9 @@ xyz -v         |_ Версия программы
 xyz --version  |
               ─┘
 ```
-***
 
+**Примечание:** `cau.exe` (CheckiAutoUpdater) - программа, которая проверяет наличие обновления в удалённом репозитории. [Подробнее](https://github.com/ivnktrv/CheckiAutoUpdater)
+***
 **Например:**
 
 - У нас есть [архив](example/SECRET.zip) с секретным содержимым:
