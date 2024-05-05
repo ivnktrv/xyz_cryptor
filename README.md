@@ -30,6 +30,12 @@ xyz --version  |
               ─┘
 ```
 
+| ОС      | Статус             |
+|---------|--------------------|
+| Windows | <center>:white_check_mark: |
+| Linux   | <center>:white_check_mark: |
+| MacOS   | <center>:x:                |
+
 **Примечание:** `cau.exe` (CheckiAutoUpdater) - программа, которая проверяет наличие обновления в удалённом репозитории. [Подробнее](https://github.com/ivnktrv/CheckiAutoUpdater)
 ***
 **Например:**
