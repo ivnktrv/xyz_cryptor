@@ -1,4 +1,6 @@
-﻿using xyz_cryptor;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
+using xyz_cryptor;
 
 namespace xyz_main;
 

@@ -1,5 +1,4 @@
-﻿using System.Reflection.Emit;
-using xyz_keygen;
+﻿using xyz_keygen;
 
 namespace xyz_cryptor;
 
